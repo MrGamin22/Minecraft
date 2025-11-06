@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>مزيد من info — MC Download Hub</title>
+  <meta name="description" content="معلومات مفصلة عن نسخ ماين كرافت وكيفية التثبيت والمتطلبات" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1: #0f1724; --accent: #7c3aed; --accent-2:#06b6d4; --muted:#9aa4b2; --card:#0b1220; --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:28px;font-family:'Inter',sans-serif;background:linear-gradient(180deg,var(--bg-1),#071025);color:#eef2f7;}
+    .container{max-width:980px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .mark{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-family:'Orbitron'}
+    h1{font-family:'Orbitron',sans-serif;margin:8px 0}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);margin-top:18px}
+    .card h2{margin:0 0 8px 0}
+    .muted{color:var(--muted);font-size:14px}
+
+    .cols{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:12px}
+    .aside{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+
+    .step{background:rgba(255,255,255,0.02);padding:10px;border-radius:10px;margin-bottom:10px}
+    .pill{display:inline-block;padding:6px 8px;border-radius:999px;background:var(--glass);font-weight:700}
+
+    a.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+
+    footer{margin-top:24px;color:var(--muted);text-align:center}
+
+    @media (max-width:900px){.cols{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">MG</div>
+        <div>
+          <h1>مزيد من المعلومات</h1>
+          <div class="muted">تفاصيل التثبيت، المتطلبات، والتحذيرات</div>
+        </div>
+      </div>
+      <div>
+        <a class="btn ghost" href="minecraft.html">العودة</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>نظرة عامة</h2>
+        <p class="muted">هذه الصفحة تشرح كل ما تحتاجه عن الإصدارات الموجودة: Java، Bedrock، والتجمعات  اقرأ كل قسم بعناية قبل التحميل والتثبيت.</p>
+      </section>
+
+      <div class="cols">
+        <div>
+          <section class="card">
+            <h2>Java Edition — المتطلبات وطريقة التثبيت</h2>
+            <p class="muted">مناسب للاعبين الذين يفضلون التعديلات (mods) وخوادم Java.</p>
+            <div class="step"><strong>المتطلبات الأدني:</strong>
+              <ul class="muted">
+                <li>نظام تشغيل: Windows 7+ / macOS / Linux</li>
+                <li>ذاكرة: 4GB+ (يوصى 8GB للـmods)</li>
+                <li>تثبيت Java Runtime (JRE) 17 أو أحدث</li>
+                <li>مساحة تخزين: 1GB+</li>
+              </ul>
+            </div>
+            <div class="step"><strong>خطوات التثبيت:</strong>
+              <ol class="muted">
+                <li>نزّل ملف الـInstaller من الزر "تحميل مباشر".</li>
+                <li>شغّل الملف واتبع التعليمات.</li>
+                <li>إذا أردت تشغيل mods استخدم Launcher يدعمها (مثلاً: Forge أو Fabric).</li>
+              </ol>
+            </div>
+            <div class="step"><strong>نصائح أمان:</strong>
+              <p class="muted">افحص الملفات بواسطة antivirus وتأكد من مصدر التحميل. لا تشغّل ملفات .jar مجهولة المصدر.</p>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>Bedrock Edition — المتطلبات وطريقة التثبيت</h2>
+            <p class="muted">نسخة متعددة الأجهزة تعمل على Windows 10/11 والهواتف والأجهزة اللوحية.</p>
+            <div class="step"><strong>المتطلبات:</strong>
+              <ul class="muted"><li> Android</li>
+                <li>مساحة تخزين 1GB+</li>
+            <li>وحدة المعالجة المركزية: بسرعة 800 ميجا هرتز ARM-v7a</li>
+            <li>ذاكرة الوصول العشوائية الرام: 2 جيجابايت.
+</li>
+            <li>الرسومات: أي نوع مع دعم OpenGL ES 2.0.
+</li>
+            <li>أندرويد: 4.0.4.
+</li>
+           
+            </ul>
+            </div>
+            <div class="step"><strong>التثبيت:</strong>
+              <p class="muted">نزّل الحزمة المناسبة لجهازك واتبع تعليمات التثبيت. على Windows عادةً تكون حزمة UWP من المتجر أفضل لأنها محدثة تلقائياً.</p>
+            </div>
+          </section>
+
+
+        </div>
+
+        <aside class="aside">
+          <h3>معلومات سريعة</h3>
+          <div style="margin-top:10px">
+            <div class="pill">حجم تقريبي</div>
+            <p class="muted" style="margin-top:8px">Java: ~200MB — Bedrock: ~300MB</p>
+          </div>
+
+          <div style="margin-top:12px">
+            <div class="pill">دعم</div>
+            <p class="muted" style="margin-top:8px">لو واجهت مشكلة في التثبيت، جرب تشغيل كمسؤول أو راجع المتطلبات من الأعلى.</p>
+          </div>
+
+        </aside>
+      </div>
+
+      <section class="card" style="margin-top:12px">
+        <h2>المشاكل الشائعة وحلول سريعة</h2>
+        <ul class="muted">
+          <li>اللعبة لا تعمل: تأكد من تحديث التعريفات ووجود متطلبات النظام.</li>
+          <li>خطأ في Java: ثبت JRE المناسب (17+).</li>
+          <li>Mods لا تعمل: تأكد من توافق إصدار الـmod مع إصدار اللعبة والـlauncher.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      © Mohamed Fathy Abdalrhman — معلومات إرشادية فقط. تأكد من احترام حقوق النشر ومصادر الملفات.
+      <br>
+       <a href="mailto:midofathy161@gmail.com.com" style="color:#7c3aed;text-decoration:none;">للتواصل midofathy161@gmail.com</a>
+    </footer>
+  </div>
+
+</body>
+</html>
