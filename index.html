@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تحميل جميع — Gaming Hub</title>
+  <meta name="description" content="موقع بسيط لتحميل ماين كرافت (أمثلة وهمية للروابط) — تصميم جيمينج باستخدام HTML و CSS فقط." />
+
+  <!-- خطوط Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8551495271483689"
+     crossorigin="anonymous"></script>
+
+  <style>
+    :root{
+      --bg-1: #0f1724; /* داكن */
+      --accent: #7c3aed; /* بنفسجي */
+      --accent-2:#06b6d4; /* سماوي */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;padding:0;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Kufi Arabic', sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent 6%),
+        radial-gradient(1000px 500px at 90% 90%, rgba(6,182,212,0.06), transparent 6%),
+        linear-gradient(180deg,var(--bg-1), #071025 120%);
+      color:#eef2f7;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      display:flex;flex-direction:column;gap:28px;
+    }
+
+    /* container */
+    .container{max-width:1100px;margin:0 auto;width:100%;}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{
+      width:52px;height:52px;border-radius:8px;
+      background: linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;place-items:center;font-family:'Orbitron';font-weight:700;font-size:20px;
+      box-shadow: 0 6px 18px rgba(7,12,22,0.6), inset 0 -6px 12px rgba(255,255,255,0.04);
+    }
+    .logo h1{margin:0;font-size:18px}
+    .logo p{margin:0;font-size:12px;color:var(--muted)}
+
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a:hover{color:#fff;background:var(--glass)}
+
+    /* hero */
+    .hero{
+      display:grid;grid-template-columns: 1fr 420px;gap:24px;align-items:center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:16px;padding:26px;box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .hero .headline{font-family:'Orbitron',sans-serif;font-size:28px;margin:0 0 12px 0}
+    .hero p{color:var(--muted);margin:0 0 18px 0;line-height:1.6}
+
+    /* fake preview */
+    .preview{
+      background: linear-gradient(180deg,#071018 60%, #0a1624 100%);
+      height:220px;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .screen{flex:1;background:linear-gradient(90deg,#062028,#041220);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Orbitron';font-size:14px;color:rgba(255,255,255,0.85)}
+    .badges{display:flex;gap:8px}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600;color:var(--muted);font-size:13px}
+
+    /* grid for download cards */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 20px rgba(2,6,23,0.5)}
+    .card h3{margin:0 0 8px 0;font-size:16px}
+    .card p{margin:0 0 14px 0;color:var(--muted);font-size:13px}
+    .card .meta{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+    .pill{background:var(--glass);padding:6px 8px;border-radius:10px;font-weight:700;font-size:12px}
+    .download-row{display:flex;gap:10px;align-items:center}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+    .btn.ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+
+    /* features & faq */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+    .feature{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .feature h4{margin:0 0 8px 0}
+    .feature p{margin:0;color:var(--muted);font-size:13px}
+
+    footer{margin-top:10px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      body{padding:18px}
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+      .logo h1{font-size:16px}
+    }
+
+    /* small decorative pixel border */
+    .pixel-border{border-style:solid;border-width:3px;border-image:linear-gradient(45deg,#111 0%, #222 20%, #444 80%, #111 100%) 1}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">MG</div>
+        <div>
+          <h1>Mr.Gaming</h1>
+          <p>تحميل جميع الالعاب — ماين كرافت — آمن وسهل</p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#downloads">التحميلات</a>
+        <a href="#features">المميزات</a>
+        <a href="#faq">الأسئلة</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h2 class="headline">حمل ماين كرافت بسهولة — إصدارات وأنماط متعددة</h2>
+        <p>هنا صفحة توضيحية لمركز تحميل ماين كرافت. الروابط أدناه هي أمثلة — استبدلها بروابط التحميل الحقيقية أو ملفاتك المستضافة.</p>
+
+        <div class="grid" id="downloads">
+
+          <article class="card">
+            <h3>Minecraft — Java Edition (Tlauncher)</h3>
+            <p>الإصدار الرسمي للكمبيوتر (Java). يتطلب Java Runtime. مناسب للاعبين التقليديين والـmods.</p>
+            <div class="meta"><span class="pill">حجم: 200MB</span><span class="pill">نسخة: 1.20+</span></div>
+            <div class="download-row">
+              <a target="_blank" class="btn primary" href="https://www.mediafire.com/file/n6sh1fww2tr4cff/TLauncher-Installer-1.9.1.exe/file" role="button">تحميل مباشر</a>
+              <a class="btn ghost" href="minecraft info.html">مزيد من info</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Bedrock Edition</h3>
+            <p>إصدار Bedrock لأجهزة Windows 10 و 11 — يدعم اللعب عبر الأجهزة المختلفة.</p>
+            <div class="meta"><span class="pill">حجم: 833.3MB</span><span class="pill">نسخة: التحديث الأخير</span></div>
+            <div class="download-row">
+              <a target="_blank" class="btn primary" href="https://www.mediafire.com/file/pk8ud2r5aitz4md/Minecraft_1.21.120.21.apk/file">تحميل مباشر</a>
+              <a class="btn ghost" href="minecraft info.html">مزيد من info</a>
+            </div>
+          </article>
+
+
+
+        </div>
+
+        <div class="two-col" style="margin-top:18px" id="features">
+          <div class="feature">
+            <h4>آمن وسهل</h4>
+            <p>صفحة بسيطة تعرض روابط التحميل مع معلومات الحجم والإصدار. تأكد من استضافة الملفات في مصدر موثوق أو وضع روابط رسمية.</p>
+          </div>
+          <div class="feature">
+            <h4>تصميم جيمينج</h4>
+            <p>ألوان متوهجة وتأثيرات بسيطة لواجهة جذابة. متجاوب مع الشاشات الصغيرة والمتوسطة.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <aside>
+        <div class="preview pixel-border">
+          <div class="badges">
+          </div>
+          <div class="screen">
+            <img width="160px" src="https://imgs.search.brave.com/Z7rFT_wxtLyFNw-DVuYr-hB5_lb6CIm-nq0gClEBBas/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9taW5l/Y3JhZnQtbG9nby1v/bmxpbmUtZ2FtZS1k/aXJ0LWJsb2NrLWls/bHVzdHJhdGlvbnMt/Y29uY2VwdC1kZXNp/Z24taXNvbGF0ZWQt/MTg2Nzc1NTUwLmpw/Zw">
+          </div>
+
+        </div>
+      </aside>
+      <aside>
+        <div class="preview pixel-border">
+          <div class="badges">
+          </div>
+          <div class="screen">
+            <img width="560px" src="https://imgs.search.brave.com/EOHvBpPpoQKJu7bbxORdhSCrr_k5l60K0PqVJUHUIfE/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/YXBsdXMtbWVkaWEt/bGlicmFyeS1zZXJ2/aWNlLW1lZGlhL2M0/YmYwNzVjLTlmODYt/NDA3Yy1hN2JjLTM0/NjVlNmUzYmM4YS5f/X0NSMCwwLDI5MTAs/OTAwX1BUMF9TWDk3/MF9WMV9fXy5qcGc">
+          </div>
+
+        </div>
+      </aside>
+    </section>
+
+    <section id="faq" style="margin-top:8px">
+      <h3 style="font-family:'Orbitron';margin-bottom:8px">الأسئلة الشائعة</h3>
+      <div class="feature">
+        <h4>هل هذه النسخ أصلية؟</h4>
+        <p>هذا مثال تصميمي. عند نشر موقع حقيقي تأكد من وضع روابط رسمية أو ملفات مرخَّصة واحترام حقوق النشر.</p>
+      </div>
+      <div class="feature" style="margin-top:10px">
+        <h4>هل أحتاج إلى جافا؟</h4>
+        <p>نسخة Java تحتاج Java Runtime. Bedrock لا تحتاجها عادة.</p>
+      </div>
+    </section>
+
+    <footer>
+      © Mohamed Fathy Abdalrhman — نموذج تصميمي. استبدل الروابط بعلاماتك الخاصة قبل النشر.
+      <br>
+      <a href="mailto:midofathy161@gmail.com.com" style="color:#7c3aed;text-decoration:none;">للتواصل midofathy161@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
